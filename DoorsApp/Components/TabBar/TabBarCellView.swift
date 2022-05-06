@@ -18,9 +18,11 @@ class TabBarCellView: UICollectionViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var indicator: UIView!
     
+    let selectedColor = UIColor(red: 42.0 / 255.0, green: 179.0 / 255.0, blue: 245.0 / 255.0, alpha: 1)
+    
     func configure(for tabModel: TabModel, selected: Bool) {
         title.text = tabModel.name
         
-        indicator.backgroundColor = selected ? UIColor(red: 42.0 / 255.0, green: 179.0 / 255.0, blue: 245.0 / 255.0, alpha: 1) : .systemGray3
+        indicator.backgroundColor = selected ? selectedColor : .systemGray3
     }
 }

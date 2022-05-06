@@ -21,6 +21,23 @@ class CamerasTableView: ModelTableView<CameraGroup> {
         rowHeight = UITableView.automaticDimension
         estimatedRowHeight = 200
     }
+    
+    func favoriteAction(cell: CameraTableViewCell, model: CameraModel) -> UIContextualAction {
+        let favoriteAction = UIContextualAction(style: .normal, title: "") { action, view, complete in
+            self.didFavorite?(model)
+            
+            cell.configure(for: model)
+            
+            complete(true)
+        }
+        
+        let starImage = model.favorites ? UIImage(systemName: "star") : UIImage(systemName: "star.fill")
+        
+        favoriteAction.image = starImage?.withTintColor(.orange, renderingMode: .alwaysOriginal)
+        favoriteAction.backgroundColor = .systemGray6
+        
+        return favoriteAction
+    }
 }
 
 extension CamerasTableView: UITableViewDataSource {
@@ -70,22 +87,13 @@ extension CamerasTableView: UITableViewDataSource {
         if let group = group {
             let cameraModel = group.cameras[indexPath.row]
             
-            let favoriteAction = UIContextualAction(style: .normal, title: "") { action, view, complete in
-
-                self.didFavorite?(cameraModel)
-                
-                let cell = tableView.cellForRow(at: indexPath) as! CameraTableViewCell
-                cell.configure(for: cameraModel)
-                
-                complete(true)
-            }
+            let cell = tableView.cellForRow(at: indexPath) as! CameraTableViewCell
             
-            let starImage = cameraModel.favorites ? UIImage(systemName: "star") : UIImage(systemName: "star.fill")
+            let actions = [
+                favoriteAction(cell: cell, model: cameraModel)
+            ]
             
-            favoriteAction.image = starImage?.withTintColor(.orange, renderingMode: .alwaysOriginal)
-            favoriteAction.backgroundColor = .systemGray6
-            
-            let config = UISwipeActionsConfiguration(actions: [favoriteAction])
+            let config = UISwipeActionsConfiguration(actions: actions)
             config.performsFirstActionWithFullSwipe = false
             
             return config

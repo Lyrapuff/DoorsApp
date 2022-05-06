@@ -23,6 +23,38 @@ class DoorsTableView: ModelTableView<DoorModel> {
         rowHeight = UITableView.automaticDimension
         estimatedRowHeight = 200
     }
+    
+    func favoriteAction(cell: DoorsTableViewCell, model: DoorModel) -> UIContextualAction {
+        let favoriteAction = UIContextualAction(style: .normal, title: "") { action, view, complete in
+            self.didFavorite?(model)
+            
+            cell.configure(doorModel: model)
+            
+            complete(true)
+        }
+        
+        let starImage = model.favorites ? UIImage(systemName: "star") : UIImage(systemName: "star.fill")
+        
+        favoriteAction.image = starImage?.withTintColor(.orange, renderingMode: .alwaysOriginal)
+        favoriteAction.backgroundColor = .systemGray6
+        
+        return favoriteAction
+    }
+    
+    func editAction(cell: DoorsTableViewCell, model: DoorModel) -> UIContextualAction {
+        let editAction = UIContextualAction(style: .normal, title: "") { action, view, complete in
+            self.didEdit?(model)
+            
+            complete(true)
+        }
+        
+        let pencilImage = UIImage(systemName: "pencil")
+        
+        editAction.image = pencilImage?.withTintColor(.blue, renderingMode: .alwaysOriginal)
+        editAction.backgroundColor = .systemGray6
+        
+        return editAction
+    }
 }
 
 extension DoorsTableView: UITableViewDataSource {
@@ -53,35 +85,13 @@ extension DoorsTableView: UITableViewDataSource {
         
         if let doorModel = doorModel {
             let cell = tableView.cellForRow(at: indexPath) as! DoorsTableViewCell
+
+            let actions = [
+                favoriteAction(cell: cell, model: doorModel),
+                editAction(cell: cell, model: doorModel)
+            ]
             
-            // favorite
-            let favoriteAction = UIContextualAction(style: .normal, title: "") { action, view, complete in
-                self.didFavorite?(doorModel)
-                
-                cell.configure(doorModel: doorModel)
-                
-                complete(true)
-            }
-            
-            let starImage = doorModel.favorites ? UIImage(systemName: "star") : UIImage(systemName: "star.fill")
-            
-            favoriteAction.image = starImage?.withTintColor(.orange, renderingMode: .alwaysOriginal)
-            favoriteAction.backgroundColor = .systemGray6
-            
-            // edit
-            let editAction = UIContextualAction(style: .normal, title: "") { action, view, complete in
-                self.didEdit?(doorModel)
-                
-                complete(true)
-            }
-            
-            let pencilImage = UIImage(systemName: "pencil")
-            
-            editAction.image = pencilImage?.withTintColor(.blue, renderingMode: .alwaysOriginal)
-            editAction.backgroundColor = .systemGray6
-            
-            // config
-            let config = UISwipeActionsConfiguration(actions: [favoriteAction, editAction])
+            let config = UISwipeActionsConfiguration(actions: actions)
             config.performsFirstActionWithFullSwipe = false
             
             return config
@@ -102,5 +112,5 @@ extension DoorsTableView: UITableViewDataSource {
 }
 
 extension DoorsTableView: UITableViewDelegate {
-    
+    // empty space p.p
 }

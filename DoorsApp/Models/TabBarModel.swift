@@ -6,22 +6,14 @@
 //
 
 import Foundation
+import UIKit
 
 class TabModel {
     var name: String = String()
+    var controller: UIViewController
     
-    init(name: String) {
+    init(name: String, controller: UIViewController) {
         self.name = name
-    }
-}
-
-extension TabModel {
-    static func testData() -> [TabModel] {
-        let tabs: [TabModel] = [
-            TabModel(name: "Камеры"),
-            TabModel(name: "Двери")
-        ]
-        
-        return tabs
+        self.controller = controller
     }
 }

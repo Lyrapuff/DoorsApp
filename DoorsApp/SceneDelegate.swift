@@ -20,16 +20,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let tabBar = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
         
-        let controllers = [
-            storyboard.instantiateViewController(withIdentifier: "CamerasViewController"),
-            storyboard.instantiateViewController(withIdentifier: "DoorsViewController")
-        ]
-        
-        tabBar.controllers = controllers
-        
         let tabModels = [
-            TabModel(name: "Камеры"),
-            TabModel(name: "Двери")
+            TabModel(name: "Камеры", controller: storyboard.instantiateViewController(withIdentifier: "CamerasViewController")),
+            TabModel(name: "Двери", controller: storyboard.instantiateViewController(withIdentifier: "DoorsViewController"))
         ]
         
         tabBar.tabModels = tabModels

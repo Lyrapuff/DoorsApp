@@ -8,18 +8,15 @@
 import UIKit
 
 class TabBarViewController: UIViewController {
-    var controllers: [UIViewController] = []
     var tabModels: [TabModel] = []
     
-    var selectedTab: Int? = nil {
+    var selectedTab: Int? = 0 {
         didSet {
-            if let oldValue = oldValue {
-                remove(controllers[oldValue])
+            if oldValue == selectedTab {
+                return
             }
             
-            if let selectedTab = selectedTab {
-                add(controllers[selectedTab])
-            }
+            switchTab(from: oldValue, to: selectedTab)
         }
     }
     
@@ -33,11 +30,21 @@ class TabBarViewController: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        selectedTab = 0
+        add(tabModels[0].controller)
     }
     
     func tabBarDidSelectTab(selected: Int) {
         selectedTab = selected
+    }
+    
+    func switchTab(from: Int?, to: Int?) {
+        if let from = from, let to = to {
+            let from = tabModels[from].controller
+            let to = tabModels[to].controller
+            
+            remove(from)
+            add(to)
+        }
     }
     
     func add(_ child: UIViewController, frame: CGRect? = nil) {

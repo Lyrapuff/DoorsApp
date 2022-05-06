@@ -130,11 +130,10 @@
 		CE0F16E728211514005C0F28 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				CE50BF932825199F006442E0 /* Common */,
 				CE238D672822BE1F005EA25A /* Doors */,
 				CE238D662822BE14005EA25A /* Cameras */,
 				CE238D652822BE0C005EA25A /* TabBar */,
-				CE50BF8E28250B6A006442E0 /* NetworkImageView.swift */,
-				CE50BF902825155C006442E0 /* ModelTableView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -142,7 +141,7 @@
 		CE0F16EA282140DC005C0F28 /* Services */ = {
 			isa = PBXGroup;
 			children = (
-				CE238D3F282269C4005EA25A /* Repositories */,
+				CE50BF922825195C006442E0 /* Persistence */,
 				CEF634B52820254E00D3DD2A /* Api */,
 				CEF8492A2823B53F00A11B13 /* NetworkService.swift */,
 			);
@@ -170,7 +169,6 @@
 			isa = PBXGroup;
 			children = (
 				CE238D40282269CF005EA25A /* CamerasRepository.swift */,
-				CE238D4228226A6E005EA25A /* UnitOfWork.swift */,
 				CE238D6E2822C1B4005EA25A /* DoorsRepository.swift */,
 				CE238D702822C1F8005EA25A /* Repository.swift */,
 				CEF8492E2823E35200A11B13 /* CachingRepository.swift */,
@@ -206,6 +204,24 @@
 				CE238D6B2822BE5B005EA25A /* DoorsTableViewCell.xib */,
 			);
 			path = Doors;
+			sourceTree = "<group>";
+		};
+		CE50BF922825195C006442E0 /* Persistence */ = {
+			isa = PBXGroup;
+			children = (
+				CE238D3F282269C4005EA25A /* Repositories */,
+				CE238D4228226A6E005EA25A /* UnitOfWork.swift */,
+			);
+			path = Persistence;
+			sourceTree = "<group>";
+		};
+		CE50BF932825199F006442E0 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				CE50BF8E28250B6A006442E0 /* NetworkImageView.swift */,
+				CE50BF902825155C006442E0 /* ModelTableView.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		CEF63487281FF09000D3DD2A = {
