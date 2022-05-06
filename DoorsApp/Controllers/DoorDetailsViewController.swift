@@ -12,7 +12,7 @@ class DoorDetailsViewController: UIViewController {
     var doorModel: DoorModel?
     
     @IBOutlet weak var titleText: UILabel!
-    @IBOutlet weak var snapshotView: UIImageView!
+    @IBOutlet weak var snapshotView: NetworkImageView!
     @IBOutlet weak var openView: UIView!
     @IBOutlet weak var backButton: UIButton!
     
@@ -30,21 +30,10 @@ class DoorDetailsViewController: UIViewController {
             
             snapshotView.layer.cornerRadius = 10.0
             
-            snapshotView.image = nil
+            snapshotView.didSetImage = NetworkImageView.hideIfNil(what: snapshotView)
             
-            // todo: maybe move out all of the snapshot views into a single view
             if let snapshot = doorModel.snapshot, let url = URL(string: snapshot) {
-                NetworkService.shared.downloadImage(cached: true, url: url) { snapshotImage in
-                    if let snapshotImage = snapshotImage {
-                        self.snapshotView.isHidden = false
-                        
-                        self.snapshotView.image = snapshotImage
-                    }
-                }
-            }
-            
-            if snapshotView.image == nil {
-                snapshotView.isHidden = true
+                snapshotView.configure(for: url)
             }
         }
     }

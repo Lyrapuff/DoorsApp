@@ -7,12 +7,10 @@
 
 import UIKit
 
-class DoorsTableView: UITableView {
+class DoorsTableView: ModelTableView<DoorModel> {
     var didEdit: ((DoorModel) -> Void)?
     var didFavorite: ((DoorModel) -> Void)?
     var didPress: ((DoorModel) -> Void)?
-    
-    var doorModels: [DoorModel] = []
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -25,23 +23,11 @@ class DoorsTableView: UITableView {
         rowHeight = UITableView.automaticDimension
         estimatedRowHeight = 200
     }
-    
-    func getModel(index: Int) -> DoorModel? {
-        if index >= doorModels.count {
-            return nil
-        }
-        
-        return doorModels[index]
-    }
-    
-    func configure(for doorModels: [DoorModel]) {
-        self.doorModels = doorModels
-    }
 }
 
 extension DoorsTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return doorModels.count
+        return models.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

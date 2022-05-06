@@ -8,10 +8,8 @@
 import Foundation
 import UIKit
 
-class CamerasTableView: UITableView {
+class CamerasTableView: ModelTableView<CameraGroup> {
     var didFavorite: ((CameraModel) -> Void)?
-    
-    var cameraGroups: [CameraGroup] = []
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
@@ -23,23 +21,11 @@ class CamerasTableView: UITableView {
         rowHeight = UITableView.automaticDimension
         estimatedRowHeight = 200
     }
-    
-    func getModel(index: Int) -> CameraGroup? {
-        if index >= cameraGroups.count {
-            return nil
-        }
-        
-        return cameraGroups[index]
-    }
-    
-    func configure(for cameraGroups: [CameraGroup]) {
-        self.cameraGroups = cameraGroups
-    }
 }
 
 extension CamerasTableView: UITableViewDataSource {
     func numberOfSections(in tableView: UITableView) -> Int {
-        return cameraGroups.count
+        return models.count
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {

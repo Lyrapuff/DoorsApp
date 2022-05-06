@@ -14,7 +14,7 @@ class DoorEditViewController: UIViewController {
     var doorModel: DoorModel?
     
     @IBOutlet weak var nameField: UITextField!
-    @IBOutlet weak var snapshotView: UIImageView!
+    @IBOutlet weak var snapshotView: NetworkImageView!
     @IBOutlet weak var saveButton: UIButton!
     
     override func viewDidLoad() {
@@ -31,20 +31,10 @@ class DoorEditViewController: UIViewController {
             
             snapshotView.layer.cornerRadius = 10.0
             
-            snapshotView.image = nil
+            snapshotView.didSetImage = NetworkImageView.hideIfNil(what: snapshotView)
             
             if let snapshot = doorModel.snapshot, let url = URL(string: snapshot) {
-                NetworkService.shared.downloadImage(cached: true, url: url) { snapshotImage in
-                    if let snapshotImage = snapshotImage {
-                        self.snapshotView.isHidden = false
-                        
-                        self.snapshotView.image = snapshotImage
-                    }
-                }
-            }
-            
-            if snapshotView.image == nil {
-                snapshotView.isHidden = true
+                snapshotView.configure(for: url)
             }
         }
     }

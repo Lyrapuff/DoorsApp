@@ -12,11 +12,15 @@ class DoorsViewController: UIViewController {
     
     var doorModels: [DoorModel] = [] {
         didSet {
-            tableView.configure(for: doorModels)
+            doorsTableView.configure(for: doorModels)
         }
     }
     
-    @IBOutlet weak var tableView: DoorsTableView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var doorsTableView: DoorsTableView {
+        tableView as! DoorsTableView
+    }
     
     var refreshControl: UIRefreshControl = UIRefreshControl()
     
@@ -25,9 +29,9 @@ class DoorsViewController: UIViewController {
         
         configureRefreshControl()
         
-        tableView.didFavorite = tableViewDidFavorite
-        tableView.didEdit = tableViewDidEdit
-        tableView.didPress = tableViewDidPress
+        doorsTableView.didFavorite = tableViewDidFavorite
+        doorsTableView.didEdit = tableViewDidEdit
+        doorsTableView.didPress = tableViewDidPress
     }
     
     func tableViewDidFavorite(doorModel: DoorModel) {

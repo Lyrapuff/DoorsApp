@@ -23,7 +23,7 @@
                             <view contentMode="scaleAspectFit" translatesAutoresizingMaskIntoConstraints="NO" id="NIo-JK-j1b" userLabel="Snapshot">
                                 <rect key="frame" x="0.0" y="0.0" width="355" height="188"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K2o-B0-PUh">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="K2o-B0-PUh" customClass="NetworkImageView" customModule="DoorsApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="355" height="188"/>
                                     </imageView>
                                     <view alpha="0.40000000596046448" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="njY-S6-d3x" userLabel="Dim">

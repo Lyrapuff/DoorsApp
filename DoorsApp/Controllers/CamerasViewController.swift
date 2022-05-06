@@ -13,11 +13,15 @@ class CamerasViewController: UIViewController {
     
     var cameraGroups: [CameraGroup] = [] {
         didSet {
-            tableView.configure(for: cameraGroups)
+            camerasTableView.configure(for: cameraGroups)
         }
     }
     
-    @IBOutlet weak var tableView: CamerasTableView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    var camerasTableView: CamerasTableView {
+        tableView as! CamerasTableView
+    }
     
     let refreshControl = UIRefreshControl()
     
@@ -61,7 +65,7 @@ class CamerasViewController: UIViewController {
     }
     
     func configureTable() {
-        tableView.didFavorite = tableDidFavorite
+        camerasTableView.didFavorite = tableDidFavorite
     }
     
     func tableDidFavorite(cameraModel: CameraModel) {

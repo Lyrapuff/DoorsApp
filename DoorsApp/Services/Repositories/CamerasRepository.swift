@@ -8,7 +8,6 @@
 import Foundation
 
 class CamerasRepository: CachingRepository<CameraModel> {
-    
     override func loadFromApi(api: ApiClient, loaded: @escaping ([CameraModel]?) -> Void) {
         api.getCameras { response in
             // ok

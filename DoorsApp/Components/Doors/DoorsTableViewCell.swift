@@ -7,6 +7,7 @@
 
 import UIKit
 
+// todo: maybe resuse these cells?
 class DoorsTableViewCell: UITableViewCell {
     static let identifier = "DoorsTableViewCell"
     
@@ -14,7 +15,7 @@ class DoorsTableViewCell: UITableViewCell {
         UINib(nibName: "DoorsTableViewCell", bundle: nil)
     }
     
-    @IBOutlet weak var snapshotImage: UIImageView!
+    @IBOutlet weak var snapshotImage: NetworkImageView!
     @IBOutlet weak var dim: UIView!
     @IBOutlet weak var star: UIImageView!
     @IBOutlet weak var title: UILabel!
@@ -23,25 +24,6 @@ class DoorsTableViewCell: UITableViewCell {
     
     public func configure(doorModel: DoorModel) {
         title.text = doorModel.name
-        
-        snapshotImage.image = nil
-        
-        if let snapshot = doorModel.snapshot, let url = URL(string: snapshot) {
-            NetworkService.shared.downloadImage(cached: true, url: url) { snapshotImage in
-                if let snapshotImage = snapshotImage {
-                    self.snapshotView.isHidden = false
-                    
-                    self.snapshotImage.image = snapshotImage
-                }
-            }
-        }
-        
-        if snapshotImage.image == nil {
-            snapshotView.isHidden = true
-        }
-        
-        snapshotImage.layer.cornerRadius = 10.0
-        snapshotImage.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
     
         star.isHidden = !doorModel.favorites
         
@@ -49,5 +31,15 @@ class DoorsTableViewCell: UITableViewCell {
         dim.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         
         stackView.layer.cornerRadius = 10.0
+        
+        // oh no I'm wasting precious memory on generating closures each time unu who cares about memory anyway? well maybe I do..
+        snapshotImage.didSetImage = NetworkImageView.hideIfNil(what: snapshotView)
+        
+        if let snapshot = doorModel.snapshot, let url = URL(string: snapshot) {
+            snapshotImage.configure(for: url)
+        }
+        
+        snapshotImage.layer.cornerRadius = 10.0
+        snapshotImage.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
     }
 }

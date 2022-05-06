@@ -13,6 +13,4 @@ class DoorModel: Object {
     @Persisted var snapshot: String? = nil
     @Persisted var room: String = String()
     @Persisted var favorites: Bool = false
-    
-    private var snapshotImageCache: UIImage? = nil
 }

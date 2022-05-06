@@ -147,7 +147,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Snapshot" translatesAutoresizingMaskIntoConstraints="NO" id="ABE-iw-seJ" userLabel="SnapshotView">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Snapshot" translatesAutoresizingMaskIntoConstraints="NO" id="ABE-iw-seJ" userLabel="SnapshotView" customClass="NetworkImageView" customModule="DoorsApp" customModuleProvider="target">
                                 <rect key="frame" x="15" y="179" width="384" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="B9o-dq-6bh"/>
@@ -206,7 +206,7 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jc8-WM-adD" userLabel="SnapshotView">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jc8-WM-adD" userLabel="SnapshotView" customClass="NetworkImageView" customModule="DoorsApp" customModuleProvider="target">
                                 <rect key="frame" x="15" y="119" width="384" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="uvY-Tf-da4"/>
