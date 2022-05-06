@@ -12,14 +12,10 @@ protocol ImageDownloaderProtocol {
 }
 
 class CachedImageDownloader: ImageDownloaderProtocol {
-    private var urlSession: URLSession
+    private var urlSession = ServiceCollection.shared.resolve(type: URLSession.self)!
     
     private var imageCache: [URL : UIImage] = [:]
-    
-    init() {
-        urlSession = ServiceCollection.shared.resolve(type: URLSession.self)!
-    }
-    
+
     func downloadImage(url: URL, downloaded: @escaping (UIImage?) -> Void) {
         if let image = imageCache[url] {
             downloaded(image)
@@ -48,5 +44,9 @@ class CachedImageDownloader: ImageDownloaderProtocol {
         }
         
         task.resume()
+    }
+    
+    func clearCache() {
+        imageCache.removeAll()
     }
 }

@@ -25,7 +25,7 @@ class DoorsTableView: ModelTableView<DoorModel> {
         
         automaticallyAdjustsScrollIndicatorInsets = false
         
-        contentInset = UIEdgeInsets(top: -32, left: 0, bottom: 0, right: 0)
+        //contentInset = UIEdgeInsets(top: -32, left: 0, bottom: 0, right: 0)
     }
     
     func favoriteAction(cell: DoorsTableViewCell, model: DoorModel) -> UIContextualAction {
@@ -62,6 +62,14 @@ class DoorsTableView: ModelTableView<DoorModel> {
 }
 
 extension DoorsTableView: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }
+
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return CGFloat.leastNormalMagnitude
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return models.count
     }
