@@ -11,7 +11,11 @@ import RealmSwift
 class UnitOfWork {
     static var shared = UnitOfWork()
     
-    var realm = try! Realm()
+    var realm: Realm
+    
+    init() {
+        realm = ServiceCollection.shared.resolve(type: Realm.self)!
+    }
     
     func work(worker: (Realm) -> Void) {
         worker(realm)

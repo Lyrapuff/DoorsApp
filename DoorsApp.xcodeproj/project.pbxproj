@@ -29,6 +29,8 @@
 		CE238D712822C1F8005EA25A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D702822C1F8005EA25A /* Repository.swift */; };
 		CE50BF8F28250B6A006442E0 /* NetworkImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50BF8E28250B6A006442E0 /* NetworkImageView.swift */; };
 		CE50BF912825155C006442E0 /* ModelTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50BF902825155C006442E0 /* ModelTableView.swift */; };
+		CE50BF95282539A9006442E0 /* ServiceCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50BF94282539A9006442E0 /* ServiceCollection.swift */; };
+		CE50BF9728253B74006442E0 /* AppConfigurator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50BF9628253B74006442E0 /* AppConfigurator.swift */; };
 		CEF63494281FF09000D3DD2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF63493281FF09000D3DD2A /* AppDelegate.swift */; };
 		CEF63498281FF09000D3DD2A /* CamerasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF63497281FF09000D3DD2A /* CamerasViewController.swift */; };
 		CEF6349B281FF09000D3DD2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF63499281FF09000D3DD2A /* Main.storyboard */; };
@@ -67,6 +69,8 @@
 		CE238D702822C1F8005EA25A /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
 		CE50BF8E28250B6A006442E0 /* NetworkImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageView.swift; sourceTree = "<group>"; };
 		CE50BF902825155C006442E0 /* ModelTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTableView.swift; sourceTree = "<group>"; };
+		CE50BF94282539A9006442E0 /* ServiceCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollection.swift; sourceTree = "<group>"; };
+		CE50BF9628253B74006442E0 /* AppConfigurator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConfigurator.swift; sourceTree = "<group>"; };
 		CEF63490281FF09000D3DD2A /* DoorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CEF63493281FF09000D3DD2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CEF63497281FF09000D3DD2A /* CamerasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasViewController.swift; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 				CE50BF922825195C006442E0 /* Persistence */,
 				CEF634B52820254E00D3DD2A /* Api */,
 				CEF8492A2823B53F00A11B13 /* NetworkService.swift */,
+				CE50BF94282539A9006442E0 /* ServiceCollection.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -255,6 +260,7 @@
 				CEF6349E281FF09200D3DD2A /* LaunchScreen.storyboard */,
 				CEF634A1281FF09200D3DD2A /* Info.plist */,
 				CE238D5628229CEB005EA25A /* SceneDelegate.swift */,
+				CE50BF9628253B74006442E0 /* AppConfigurator.swift */,
 			);
 			path = DoorsApp;
 			sourceTree = "<group>";
@@ -411,6 +417,7 @@
 				CE238D5228228B53005EA25A /* TabBarCellView.swift in Sources */,
 				CE238D5728229CEB005EA25A /* SceneDelegate.swift in Sources */,
 				CE238D4928228478005EA25A /* TabBarViewController.swift in Sources */,
+				CE50BF95282539A9006442E0 /* ServiceCollection.swift in Sources */,
 				CE238D622822B465005EA25A /* DoorModel.swift in Sources */,
 				CEF63498281FF09000D3DD2A /* CamerasViewController.swift in Sources */,
 				CE238D3B28225EE6005EA25A /* ApiClient.swift in Sources */,
@@ -422,6 +429,7 @@
 				CEF63494281FF09000D3DD2A /* AppDelegate.swift in Sources */,
 				CE238D4B28228554005EA25A /* TabBarModel.swift in Sources */,
 				CEF634B3282017D400D3DD2A /* CameraTableViewCell.swift in Sources */,
+				CE50BF9728253B74006442E0 /* AppConfigurator.swift in Sources */,
 				CE238D5D2822AD54005EA25A /* Doors.swift in Sources */,
 				CE238D642822BBA2005EA25A /* DoorsTableView.swift in Sources */,
 				CE238D4328226A6E005EA25A /* UnitOfWork.swift in Sources */,

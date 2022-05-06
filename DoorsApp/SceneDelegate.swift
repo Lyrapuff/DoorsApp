@@ -16,19 +16,13 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        let tabBar = storyboard.instantiateViewController(withIdentifier: "TabBarViewController") as! TabBarViewController
-        
-        let tabModels = [
-            TabModel(name: "Камеры", controller: storyboard.instantiateViewController(withIdentifier: "CamerasViewController")),
-            TabModel(name: "Двери", controller: storyboard.instantiateViewController(withIdentifier: "DoorsViewController"))
-        ]
-        
-        tabBar.tabModels = tabModels
-        
-        window?.rootViewController = tabBar
-        window?.makeKeyAndVisible()
+        if let window = window {
+            let configurator = AppConfigurator()
+            
+            configurator.configureServices(serviceCollection: ServiceCollection.shared)
+            
+            configurator.launch(window: window)
+        }
         
         guard let _ = (scene as? UIWindowScene) else { return }
     }

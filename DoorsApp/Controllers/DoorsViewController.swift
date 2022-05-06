@@ -8,7 +8,7 @@
 import UIKit
 
 class DoorsViewController: UIViewController {
-    var doorsRepository = DoorsRepository(api: RestApiClient.shared, uow: UnitOfWork.shared)
+    var doorsRepository = ServiceCollection.shared.resolve(type: CachingRepository<DoorModel>.self)!
     
     var doorModels: [DoorModel] = [] {
         didSet {

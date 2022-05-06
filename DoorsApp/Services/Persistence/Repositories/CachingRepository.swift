@@ -12,9 +12,9 @@ class CachingRepository<T: Object>: Repository {
     private var api: ApiClient
     private var uow: UnitOfWork
     
-    init(api: ApiClient, uow: UnitOfWork) {
-        self.api = api
-        self.uow = uow
+    init() {
+        api = ServiceCollection.shared.resolve(type: ApiClient.self)!
+        uow = ServiceCollection.shared.resolve(type: UnitOfWork.self)!
     }
     
     func loadAll(loaded: @escaping ([T]?) -> Void) {
