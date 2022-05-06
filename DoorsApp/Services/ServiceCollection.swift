@@ -23,6 +23,10 @@ class ServiceCollection: ServiceCollectionProtocol {
     }
     
     func resolve<T>(type: T.Type) -> T? {
+        if !services.keys.contains("\(type)") {
+            print("WARNING! Trying to resolve \("\(type)") but it was never registered")
+        }
+        
         return services["\(type)"] as? T
     }
 }

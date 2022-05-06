@@ -7,15 +7,21 @@
 
 import UIKit
 
-class NetworkService {
-    static var shared = NetworkService()
-    
-    private var urlSession = URLSession.shared
+protocol ImageDownloaderProtocol {
+    func downloadImage(url: URL, downloaded: @escaping (UIImage?) -> Void)
+}
+
+class CachedImageDownloader: ImageDownloaderProtocol {
+    private var urlSession: URLSession
     
     private var imageCache: [URL : UIImage] = [:]
     
-    func downloadImage(cached: Bool, url: URL, downloaded: @escaping (UIImage?) -> Void) {
-        if cached, let image = imageCache[url] {
+    init() {
+        urlSession = ServiceCollection.shared.resolve(type: URLSession.self)!
+    }
+    
+    func downloadImage(url: URL, downloaded: @escaping (UIImage?) -> Void) {
+        if let image = imageCache[url] {
             downloaded(image)
             return
         }
@@ -42,9 +48,5 @@ class NetworkService {
         }
         
         task.resume()
-    }
-    
-    func clearImageCache() {
-        imageCache.removeAll()
     }
 }

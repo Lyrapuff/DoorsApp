@@ -35,19 +35,19 @@ class CachingRepository<T: Object>: Repository {
     func loadFromApi(api: ApiClient, loaded: @escaping ([T]?) -> Void) {}
     
     func cache(models: [T]) {
-        uow.write { realm in
+        try! uow.write { realm in
             realm.add(models)
         }
     }
     
     func deleteAll() {
-        uow.write { realm in
+        try! uow.write { realm in
             realm.delete(realm.objects(T.self))
         }
     }
     
     func change(changer: () -> Void) {
-        uow.write { realm in
+        try! uow.write { realm in
             changer()
         }
     }

@@ -10,9 +10,13 @@ import Foundation
 class RestApiClient: ApiClient {
     public static var shared = RestApiClient()
     
-    private var urlSession = URLSession.shared
-    
     private let baseUrl = "https://cars.cprogroup.ru/api/rubetek/"
+    
+    private var urlSession: URLSession
+    
+    init() {
+        urlSession = ServiceCollection.shared.resolve(type: URLSession.self)!
+    }
     
     func get<T: Codable>(
         method: String,

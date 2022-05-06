@@ -12,7 +12,12 @@ class AppConfigurator {
     func configureServices(serviceCollection: ServiceCollectionProtocol) {
         serviceCollection.register(type: Realm.self, instance: try! Realm())
         
+        serviceCollection.register(type: URLSession.self, instance: URLSession.shared)
+        
+        serviceCollection.register(type: ImageDownloaderProtocol.self, instance: CachedImageDownloader())
+        
         serviceCollection.register(type: ApiClient.self, instance: RestApiClient())
+        
         serviceCollection.register(type: UnitOfWork.self, instance: UnitOfWork())
         
         serviceCollection.register(type: CachingRepository<CameraModel>.self, instance: CamerasRepository())

@@ -21,11 +21,9 @@ class UnitOfWork {
         worker(realm)
     }
     
-    func write(writer: (Realm) -> Void) {
-        realm.beginWrite()
-        
-        writer(realm)
-        
-        try! realm.commitWrite()
+    func write(writer: (Realm) -> Void) throws {
+        try realm.write {
+            writer(realm)
+        }
     }
 }
