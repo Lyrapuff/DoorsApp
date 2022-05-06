@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="UNv-P5-rxA">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="lM3-Ll-QgM">
+            <objects>
+                <viewController storyboardIdentifier="TabBarViewController" id="UNv-P5-rxA" customClass="TabBarViewController" customModule="DoorsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mTA-Q3-v8Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNH-Mp-4dV" userLabel="ContainerView">
+                                <rect key="frame" x="0.0" y="95.5" width="414" height="766.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jod-Ue-9N8" userLabel="Header">
+                                <rect key="frame" x="0.0" y="59" width="414" height="86.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Мой дом" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UA0-l0-TD8" userLabel="Title Label">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="31.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5d-o8-7Um" userLabel="TabBar" customClass="TabBarView" customModule="DoorsApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="31.5" width="414" height="55"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="55" id="5XI-Jc-eK4"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MIS-je-t1t"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="VNH-Mp-4dV" firstAttribute="top" secondItem="Jod-Ue-9N8" secondAttribute="bottom" constant="-50" id="FXf-i9-AY3"/>
+                            <constraint firstItem="MIS-je-t1t" firstAttribute="bottom" secondItem="VNH-Mp-4dV" secondAttribute="bottom" id="LFu-LN-wbu"/>
+                            <constraint firstItem="Jod-Ue-9N8" firstAttribute="top" secondItem="MIS-je-t1t" secondAttribute="top" constant="15" id="Q16-Y8-ORX"/>
+                            <constraint firstItem="Jod-Ue-9N8" firstAttribute="leading" secondItem="MIS-je-t1t" secondAttribute="leading" id="Qct-l5-uHB"/>
+                            <constraint firstItem="Jod-Ue-9N8" firstAttribute="trailing" secondItem="MIS-je-t1t" secondAttribute="trailing" id="VhH-Cq-SXC"/>
+                            <constraint firstItem="VNH-Mp-4dV" firstAttribute="trailing" secondItem="MIS-je-t1t" secondAttribute="trailing" id="oBz-6N-bGc"/>
+                            <constraint firstItem="VNH-Mp-4dV" firstAttribute="leading" secondItem="MIS-je-t1t" secondAttribute="leading" id="teF-u6-H5Q"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="containerView" destination="VNH-Mp-4dV" id="cCm-od-KnZ"/>
+                        <outlet property="tabBarView" destination="a5d-o8-7Um" id="TqE-xy-ato"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="who-hr-OQ7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-813.04347826086962" y="64.955357142857139"/>
+        </scene>
+        <!--Cameras View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="CamerasViewController" id="BYZ-38-t0r" customClass="CamerasViewController" customModule="DoorsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="GRz-wi-WmN" userLabel="Cameras Table View" customClass="CamerasTableView" customModule="DoorsApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="systemGray6Color"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="GRz-wi-WmN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="cia-sL-Vro"/>
+                            <constraint firstItem="GRz-wi-WmN" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="iyC-Rs-Yzo"/>
+                            <constraint firstItem="GRz-wi-WmN" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oSR-1B-kLn"/>
+                            <constraint firstItem="GRz-wi-WmN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="x2l-Eg-0QW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="GRz-wi-WmN" id="KhM-LH-4Jg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="28.985507246376812" y="64.955357142857139"/>
+        </scene>
+        <!--Doors View Controller-->
+        <scene sceneID="RaB-g3-GfU">
+            <objects>
+                <viewController storyboardIdentifier="DoorsViewController" id="bZb-Ll-3u1" customClass="DoorsViewController" customModule="DoorsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QjP-cb-hbb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleAspectFit" alwaysBounceVertical="YES" showsHorizontalScrollIndicator="NO" dataMode="prototypes" style="insetGrouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" estimatedSectionHeaderHeight="-1" sectionFooterHeight="18" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Mi8-s7-zjC" customClass="DoorsTableView" customModule="DoorsApp" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <color key="sectionIndexBackgroundColor" systemColor="systemGray6Color"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="IK4-PJ-u14"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="IK4-PJ-u14" firstAttribute="trailing" secondItem="Mi8-s7-zjC" secondAttribute="trailing" id="106-mJ-JRQ"/>
+                            <constraint firstItem="IK4-PJ-u14" firstAttribute="bottom" secondItem="Mi8-s7-zjC" secondAttribute="bottom" id="81J-xq-OZA"/>
+                            <constraint firstItem="Mi8-s7-zjC" firstAttribute="top" secondItem="IK4-PJ-u14" secondAttribute="top" id="jwA-hn-8Wf"/>
+                            <constraint firstItem="Mi8-s7-zjC" firstAttribute="leading" secondItem="IK4-PJ-u14" secondAttribute="leading" id="kL5-Ow-YQj"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Mi8-s7-zjC" id="cHy-Ra-yzl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uGP-vO-Qre" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="935" y="65"/>
+        </scene>
+        <!--Door Edit View Controller-->
+        <scene sceneID="lAL-BC-2CR">
+            <objects>
+                <viewController storyboardIdentifier="DoorEditViewController" id="C4M-tx-d2j" customClass="DoorEditViewController" customModule="DoorsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="MlL-WZ-Afw">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Название двери" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tAZ-pX-cxK" userLabel="NameTitle">
+                                <rect key="frame" x="15" y="59" width="384" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="6y8-XT-2Ax"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1uJ-fZ-51h" userLabel="NameField">
+                                <rect key="frame" x="15" y="119" width="384" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="CdH-Q7-Eh2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Snapshot" translatesAutoresizingMaskIntoConstraints="NO" id="ABE-iw-seJ" userLabel="SnapshotView">
+                                <rect key="frame" x="15" y="179" width="384" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="B9o-dq-6bh"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="28q-df-O8K" userLabel="SaveButton">
+                                <rect key="frame" x="15" y="802" width="384" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="lUK-c5-6eq"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Сохранить"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Xd4-X2-b4z"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="Xd4-X2-b4z" firstAttribute="bottom" secondItem="28q-df-O8K" secondAttribute="bottom" constant="15" id="0BL-4o-sqm"/>
+                            <constraint firstItem="Xd4-X2-b4z" firstAttribute="trailing" secondItem="ABE-iw-seJ" secondAttribute="trailing" constant="15" id="1QN-Zf-DMN"/>
+                            <constraint firstItem="tAZ-pX-cxK" firstAttribute="leading" secondItem="Xd4-X2-b4z" secondAttribute="leading" constant="15" id="39D-Ur-9My"/>
+                            <constraint firstItem="ABE-iw-seJ" firstAttribute="leading" secondItem="Xd4-X2-b4z" secondAttribute="leading" constant="15" id="59D-KT-A6L"/>
+                            <constraint firstItem="1uJ-fZ-51h" firstAttribute="leading" secondItem="Xd4-X2-b4z" secondAttribute="leading" constant="15" id="7Qh-8B-JIL"/>
+                            <constraint firstItem="tAZ-pX-cxK" firstAttribute="top" secondItem="Xd4-X2-b4z" secondAttribute="top" constant="15" id="94W-gn-ggv"/>
+                            <constraint firstItem="ABE-iw-seJ" firstAttribute="top" secondItem="1uJ-fZ-51h" secondAttribute="bottom" constant="15" id="Ctn-yA-IJS"/>
+                            <constraint firstItem="Xd4-X2-b4z" firstAttribute="trailing" secondItem="1uJ-fZ-51h" secondAttribute="trailing" constant="15" id="Soa-ba-Djr"/>
+                            <constraint firstItem="1uJ-fZ-51h" firstAttribute="top" secondItem="tAZ-pX-cxK" secondAttribute="bottom" constant="15" id="btg-mg-88i"/>
+                            <constraint firstItem="Xd4-X2-b4z" firstAttribute="trailing" secondItem="28q-df-O8K" secondAttribute="trailing" constant="15" id="ffA-Sa-anU"/>
+                            <constraint firstItem="28q-df-O8K" firstAttribute="leading" secondItem="Xd4-X2-b4z" secondAttribute="leading" constant="15" id="oB1-fi-q0H"/>
+                            <constraint firstItem="Xd4-X2-b4z" firstAttribute="trailing" secondItem="tAZ-pX-cxK" secondAttribute="trailing" constant="15" id="uML-Ix-GQR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="nameField" destination="1uJ-fZ-51h" id="IhT-eT-EC6"/>
+                        <outlet property="saveButton" destination="28q-df-O8K" id="qpx-Py-2Xw"/>
+                        <outlet property="snapshotView" destination="ABE-iw-seJ" id="dkQ-zL-Etb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y0W-rb-gTY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="29" y="-628"/>
+        </scene>
+        <!--Door Details View Controller-->
+        <scene sceneID="e1u-iy-ChK">
+            <objects>
+                <viewController storyboardIdentifier="DoorDetailsViewController" id="Ian-bi-iDy" customClass="DoorDetailsViewController" customModule="DoorsApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sOp-Na-kde">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Домофон общедомовой" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vX1-dJ-TWq" userLabel="TitleText">
+                                <rect key="frame" x="15" y="59" width="384" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="97E-F0-8uc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Jc8-WM-adD" userLabel="SnapshotView">
+                                <rect key="frame" x="15" y="119" width="384" height="200"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="uvY-Tf-da4"/>
+                                </constraints>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSn-Ej-NOm" userLabel="OpenView">
+                                <rect key="frame" x="15" y="707" width="384" height="90"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="key" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Tsr-TS-dMI">
+                                        <rect key="frame" x="0.0" y="7" width="384" height="48"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Открыть дверь" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nn5-0g-opI">
+                                        <rect key="frame" x="0.0" y="60" width="384" height="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" systemColor="systemGrayColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="Nn5-0g-opI" firstAttribute="leading" secondItem="cSn-Ej-NOm" secondAttribute="leading" id="19N-vZ-kcq"/>
+                                    <constraint firstAttribute="trailing" secondItem="Tsr-TS-dMI" secondAttribute="trailing" id="4UJ-7R-GUd"/>
+                                    <constraint firstItem="Tsr-TS-dMI" firstAttribute="centerY" secondItem="cSn-Ej-NOm" secondAttribute="centerY" constant="-14" id="Jba-aC-Cpw"/>
+                                    <constraint firstAttribute="trailing" secondItem="Nn5-0g-opI" secondAttribute="trailing" id="KZk-Nx-Dau"/>
+                                    <constraint firstAttribute="height" constant="90" id="SHx-DH-oO6"/>
+                                    <constraint firstItem="Nn5-0g-opI" firstAttribute="top" secondItem="cSn-Ej-NOm" secondAttribute="top" constant="60" id="cbv-CL-qRJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Nn5-0g-opI" secondAttribute="bottom" constant="5" id="djv-yW-GOC"/>
+                                    <constraint firstItem="Tsr-TS-dMI" firstAttribute="top" secondItem="cSn-Ej-NOm" secondAttribute="top" constant="8.5" id="iXY-qV-uIa"/>
+                                    <constraint firstItem="Tsr-TS-dMI" firstAttribute="leading" secondItem="cSn-Ej-NOm" secondAttribute="leading" id="wFy-bB-vhP"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wMi-vy-9ei" userLabel="BackButton">
+                                <rect key="frame" x="15" y="802" width="43.5" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="4Lt-2Q-LU6"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="arrow.backward" catalog="system"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="MQ9-q7-oca"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="MQ9-q7-oca" firstAttribute="bottom" secondItem="cSn-Ej-NOm" secondAttribute="bottom" constant="65" id="7bZ-a4-Z0U"/>
+                            <constraint firstItem="MQ9-q7-oca" firstAttribute="trailing" secondItem="cSn-Ej-NOm" secondAttribute="trailing" constant="15" id="7nV-D6-Sxj"/>
+                            <constraint firstItem="Jc8-WM-adD" firstAttribute="top" secondItem="vX1-dJ-TWq" secondAttribute="bottom" constant="15" id="Ge7-Ew-99s"/>
+                            <constraint firstItem="vX1-dJ-TWq" firstAttribute="top" secondItem="MQ9-q7-oca" secondAttribute="top" constant="15" id="Jgk-5q-29o"/>
+                            <constraint firstItem="MQ9-q7-oca" firstAttribute="trailing" secondItem="Jc8-WM-adD" secondAttribute="trailing" constant="15" id="d8K-6B-fKf"/>
+                            <constraint firstItem="MQ9-q7-oca" firstAttribute="trailing" secondItem="vX1-dJ-TWq" secondAttribute="trailing" constant="15" id="gGK-KM-Org"/>
+                            <constraint firstItem="wMi-vy-9ei" firstAttribute="leading" secondItem="MQ9-q7-oca" secondAttribute="leading" constant="15" id="h2B-If-89k"/>
+                            <constraint firstItem="MQ9-q7-oca" firstAttribute="bottom" secondItem="wMi-vy-9ei" secondAttribute="bottom" constant="15" id="hJN-lN-16F"/>
+                            <constraint firstItem="Jc8-WM-adD" firstAttribute="leading" secondItem="MQ9-q7-oca" secondAttribute="leading" constant="15" id="ogK-po-7E4"/>
+                            <constraint firstItem="vX1-dJ-TWq" firstAttribute="leading" secondItem="MQ9-q7-oca" secondAttribute="leading" constant="15" id="xK9-hx-qrq"/>
+                            <constraint firstItem="cSn-Ej-NOm" firstAttribute="leading" secondItem="MQ9-q7-oca" secondAttribute="leading" constant="15" id="yxc-sg-UeS"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backButton" destination="wMi-vy-9ei" id="Arv-aE-Wih"/>
+                        <outlet property="openView" destination="cSn-Ej-NOm" id="yhO-Q2-Yfd"/>
+                        <outlet property="snapshotView" destination="Jc8-WM-adD" id="kA2-cy-Fxk"/>
+                        <outlet property="titleText" destination="vX1-dJ-TWq" id="USj-g1-cvm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="npc-hO-arf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="934.78260869565224" y="-628.125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Snapshot" width="600" height="500"/>
+        <image name="arrow.backward" catalog="system" width="128" height="98"/>
+        <image name="key" catalog="system" width="86" height="128"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

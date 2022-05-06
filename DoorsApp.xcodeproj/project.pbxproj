@@ -1,0 +1,627 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0F05EF2A5F5F9DFCEC4AEECA /* Pods_DoorsApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FEFE3D56F652AC5BBC640627 /* Pods_DoorsApp.framework */; };
+		CE0F16E9282136D6005C0F28 /* RestApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE0F16E8282136D5005C0F28 /* RestApiClient.swift */; };
+		CE238D3B28225EE6005EA25A /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D3A28225EE6005EA25A /* ApiClient.swift */; };
+		CE238D41282269CF005EA25A /* CamerasRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D40282269CF005EA25A /* CamerasRepository.swift */; };
+		CE238D4328226A6E005EA25A /* UnitOfWork.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D4228226A6E005EA25A /* UnitOfWork.swift */; };
+		CE238D47282282D5005EA25A /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D46282282D5005EA25A /* TabBarView.swift */; };
+		CE238D4928228478005EA25A /* TabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D4828228478005EA25A /* TabBarViewController.swift */; };
+		CE238D4B28228554005EA25A /* TabBarModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D4A28228554005EA25A /* TabBarModel.swift */; };
+		CE238D5228228B53005EA25A /* TabBarCellView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D5028228B53005EA25A /* TabBarCellView.swift */; };
+		CE238D5328228B53005EA25A /* TabBarCellView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE238D5128228B53005EA25A /* TabBarCellView.xib */; };
+		CE238D55282291A1005EA25A /* CamerasTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D54282291A1005EA25A /* CamerasTableView.swift */; };
+		CE238D5728229CEB005EA25A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D5628229CEB005EA25A /* SceneDelegate.swift */; };
+		CE238D5B2822A218005EA25A /* DoorsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D5A2822A218005EA25A /* DoorsViewController.swift */; };
+		CE238D5D2822AD54005EA25A /* Doors.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D5C2822AD54005EA25A /* Doors.swift */; };
+		CE238D622822B465005EA25A /* DoorModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D612822B465005EA25A /* DoorModel.swift */; };
+		CE238D642822BBA2005EA25A /* DoorsTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D632822BBA2005EA25A /* DoorsTableView.swift */; };
+		CE238D6C2822BE5B005EA25A /* DoorsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D6A2822BE5B005EA25A /* DoorsTableViewCell.swift */; };
+		CE238D6D2822BE5B005EA25A /* DoorsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE238D6B2822BE5B005EA25A /* DoorsTableViewCell.xib */; };
+		CE238D6F2822C1B4005EA25A /* DoorsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D6E2822C1B4005EA25A /* DoorsRepository.swift */; };
+		CE238D712822C1F8005EA25A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D702822C1F8005EA25A /* Repository.swift */; };
+		CEF63494281FF09000D3DD2A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF63493281FF09000D3DD2A /* AppDelegate.swift */; };
+		CEF63498281FF09000D3DD2A /* CamerasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF63497281FF09000D3DD2A /* CamerasViewController.swift */; };
+		CEF6349B281FF09000D3DD2A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF63499281FF09000D3DD2A /* Main.storyboard */; };
+		CEF6349D281FF09200D3DD2A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CEF6349C281FF09200D3DD2A /* Assets.xcassets */; };
+		CEF634A0281FF09200D3DD2A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CEF6349E281FF09200D3DD2A /* LaunchScreen.storyboard */; };
+		CEF634AE28200E6300D3DD2A /* CameraModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF634AD28200E6300D3DD2A /* CameraModel.swift */; };
+		CEF634B3282017D400D3DD2A /* CameraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF634B1282017D400D3DD2A /* CameraTableViewCell.swift */; };
+		CEF634B4282017D400D3DD2A /* CameraTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF634B2282017D400D3DD2A /* CameraTableViewCell.xib */; };
+		CEF634B72820256500D3DD2A /* Cameras.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF634B62820256500D3DD2A /* Cameras.swift */; };
+		CEF8492B2823B53F00A11B13 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8492A2823B53F00A11B13 /* NetworkService.swift */; };
+		CEF8492D2823DA6B00A11B13 /* DoorEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8492C2823DA6B00A11B13 /* DoorEditViewController.swift */; };
+		CEF8492F2823E35200A11B13 /* CachingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8492E2823E35200A11B13 /* CachingRepository.swift */; };
+		CEF849312823EC9B00A11B13 /* DoorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF849302823EC9B00A11B13 /* DoorDetailsViewController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		46DF8181B21056F6D22A23E1 /* Pods-DoorsApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorsApp.release.xcconfig"; path = "Target Support Files/Pods-DoorsApp/Pods-DoorsApp.release.xcconfig"; sourceTree = "<group>"; };
+		CE0F16E8282136D5005C0F28 /* RestApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestApiClient.swift; sourceTree = "<group>"; };
+		CE238D3A28225EE6005EA25A /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		CE238D40282269CF005EA25A /* CamerasRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasRepository.swift; sourceTree = "<group>"; };
+		CE238D4228226A6E005EA25A /* UnitOfWork.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnitOfWork.swift; sourceTree = "<group>"; };
+		CE238D46282282D5005EA25A /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		CE238D4828228478005EA25A /* TabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarViewController.swift; sourceTree = "<group>"; };
+		CE238D4A28228554005EA25A /* TabBarModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarModel.swift; sourceTree = "<group>"; };
+		CE238D5028228B53005EA25A /* TabBarCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCellView.swift; sourceTree = "<group>"; };
+		CE238D5128228B53005EA25A /* TabBarCellView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TabBarCellView.xib; sourceTree = "<group>"; };
+		CE238D54282291A1005EA25A /* CamerasTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasTableView.swift; sourceTree = "<group>"; };
+		CE238D5628229CEB005EA25A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		CE238D5A2822A218005EA25A /* DoorsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsViewController.swift; sourceTree = "<group>"; };
+		CE238D5C2822AD54005EA25A /* Doors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doors.swift; sourceTree = "<group>"; };
+		CE238D612822B465005EA25A /* DoorModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorModel.swift; sourceTree = "<group>"; };
+		CE238D632822BBA2005EA25A /* DoorsTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsTableView.swift; sourceTree = "<group>"; };
+		CE238D6A2822BE5B005EA25A /* DoorsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsTableViewCell.swift; sourceTree = "<group>"; };
+		CE238D6B2822BE5B005EA25A /* DoorsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoorsTableViewCell.xib; sourceTree = "<group>"; };
+		CE238D6E2822C1B4005EA25A /* DoorsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsRepository.swift; sourceTree = "<group>"; };
+		CE238D702822C1F8005EA25A /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		CEF63490281FF09000D3DD2A /* DoorsApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DoorsApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CEF63493281FF09000D3DD2A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		CEF63497281FF09000D3DD2A /* CamerasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CamerasViewController.swift; sourceTree = "<group>"; };
+		CEF6349A281FF09000D3DD2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		CEF6349C281FF09200D3DD2A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		CEF6349F281FF09200D3DD2A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		CEF634A1281FF09200D3DD2A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CEF634AD28200E6300D3DD2A /* CameraModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraModel.swift; sourceTree = "<group>"; };
+		CEF634B1282017D400D3DD2A /* CameraTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTableViewCell.swift; sourceTree = "<group>"; };
+		CEF634B2282017D400D3DD2A /* CameraTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraTableViewCell.xib; sourceTree = "<group>"; };
+		CEF634B62820256500D3DD2A /* Cameras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cameras.swift; sourceTree = "<group>"; };
+		CEF8492A2823B53F00A11B13 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CEF8492C2823DA6B00A11B13 /* DoorEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorEditViewController.swift; sourceTree = "<group>"; };
+		CEF8492E2823E35200A11B13 /* CachingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingRepository.swift; sourceTree = "<group>"; };
+		CEF849302823EC9B00A11B13 /* DoorDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorDetailsViewController.swift; sourceTree = "<group>"; };
+		FEFE3D56F652AC5BBC640627 /* Pods_DoorsApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DoorsApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FF108B50C9888C34E2914623 /* Pods-DoorsApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DoorsApp.debug.xcconfig"; path = "Target Support Files/Pods-DoorsApp/Pods-DoorsApp.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CEF6348D281FF09000D3DD2A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F05EF2A5F5F9DFCEC4AEECA /* Pods_DoorsApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		81F2716473BF52CB5BA09251 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FF108B50C9888C34E2914623 /* Pods-DoorsApp.debug.xcconfig */,
+				46DF8181B21056F6D22A23E1 /* Pods-DoorsApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		A2466F4A92190E9BAC289EBD /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FEFE3D56F652AC5BBC640627 /* Pods_DoorsApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CE0F16E6282114FE005C0F28 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CEF63497281FF09000D3DD2A /* CamerasViewController.swift */,
+				CE238D4828228478005EA25A /* TabBarViewController.swift */,
+				CE238D5A2822A218005EA25A /* DoorsViewController.swift */,
+				CEF8492C2823DA6B00A11B13 /* DoorEditViewController.swift */,
+				CEF849302823EC9B00A11B13 /* DoorDetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		CE0F16E728211514005C0F28 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				CE238D672822BE1F005EA25A /* Doors */,
+				CE238D662822BE14005EA25A /* Cameras */,
+				CE238D652822BE0C005EA25A /* TabBar */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		CE0F16EA282140DC005C0F28 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				CE238D3F282269C4005EA25A /* Repositories */,
+				CEF634B52820254E00D3DD2A /* Api */,
+				CEF8492A2823B53F00A11B13 /* NetworkService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CE238D3928225D6B005EA25A /* Viewes */ = {
+			isa = PBXGroup;
+			children = (
+				CEF63499281FF09000D3DD2A /* Main.storyboard */,
+			);
+			path = Viewes;
+			sourceTree = "<group>";
+		};
+		CE238D3C28226136005EA25A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEF634B62820256500D3DD2A /* Cameras.swift */,
+				CE238D5C2822AD54005EA25A /* Doors.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CE238D3F282269C4005EA25A /* Repositories */ = {
+			isa = PBXGroup;
+			children = (
+				CE238D40282269CF005EA25A /* CamerasRepository.swift */,
+				CE238D4228226A6E005EA25A /* UnitOfWork.swift */,
+				CE238D6E2822C1B4005EA25A /* DoorsRepository.swift */,
+				CE238D702822C1F8005EA25A /* Repository.swift */,
+				CEF8492E2823E35200A11B13 /* CachingRepository.swift */,
+			);
+			path = Repositories;
+			sourceTree = "<group>";
+		};
+		CE238D652822BE0C005EA25A /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				CE238D46282282D5005EA25A /* TabBarView.swift */,
+				CE238D5028228B53005EA25A /* TabBarCellView.swift */,
+				CE238D5128228B53005EA25A /* TabBarCellView.xib */,
+			);
+			path = TabBar;
+			sourceTree = "<group>";
+		};
+		CE238D662822BE14005EA25A /* Cameras */ = {
+			isa = PBXGroup;
+			children = (
+				CEF634B1282017D400D3DD2A /* CameraTableViewCell.swift */,
+				CEF634B2282017D400D3DD2A /* CameraTableViewCell.xib */,
+				CE238D54282291A1005EA25A /* CamerasTableView.swift */,
+			);
+			path = Cameras;
+			sourceTree = "<group>";
+		};
+		CE238D672822BE1F005EA25A /* Doors */ = {
+			isa = PBXGroup;
+			children = (
+				CE238D632822BBA2005EA25A /* DoorsTableView.swift */,
+				CE238D6A2822BE5B005EA25A /* DoorsTableViewCell.swift */,
+				CE238D6B2822BE5B005EA25A /* DoorsTableViewCell.xib */,
+			);
+			path = Doors;
+			sourceTree = "<group>";
+		};
+		CEF63487281FF09000D3DD2A = {
+			isa = PBXGroup;
+			children = (
+				CEF63492281FF09000D3DD2A /* DoorsApp */,
+				CEF63491281FF09000D3DD2A /* Products */,
+				81F2716473BF52CB5BA09251 /* Pods */,
+				A2466F4A92190E9BAC289EBD /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		CEF63491281FF09000D3DD2A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CEF63490281FF09000D3DD2A /* DoorsApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CEF63492281FF09000D3DD2A /* DoorsApp */ = {
+			isa = PBXGroup;
+			children = (
+				CE238D3928225D6B005EA25A /* Viewes */,
+				CE0F16EA282140DC005C0F28 /* Services */,
+				CE0F16E728211514005C0F28 /* Components */,
+				CE0F16E6282114FE005C0F28 /* Controllers */,
+				CEF634AC28200E5300D3DD2A /* Models */,
+				CEF63493281FF09000D3DD2A /* AppDelegate.swift */,
+				CEF6349C281FF09200D3DD2A /* Assets.xcassets */,
+				CEF6349E281FF09200D3DD2A /* LaunchScreen.storyboard */,
+				CEF634A1281FF09200D3DD2A /* Info.plist */,
+				CE238D5628229CEB005EA25A /* SceneDelegate.swift */,
+			);
+			path = DoorsApp;
+			sourceTree = "<group>";
+		};
+		CEF634AC28200E5300D3DD2A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				CEF634AD28200E6300D3DD2A /* CameraModel.swift */,
+				CE238D4A28228554005EA25A /* TabBarModel.swift */,
+				CE238D612822B465005EA25A /* DoorModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		CEF634B52820254E00D3DD2A /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				CE238D3C28226136005EA25A /* Models */,
+				CE0F16E8282136D5005C0F28 /* RestApiClient.swift */,
+				CE238D3A28225EE6005EA25A /* ApiClient.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		CEF6348F281FF09000D3DD2A /* DoorsApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CEF634A4281FF09200D3DD2A /* Build configuration list for PBXNativeTarget "DoorsApp" */;
+			buildPhases = (
+				5719E44603A5A55BC1767925 /* [CP] Check Pods Manifest.lock */,
+				CEF6348C281FF09000D3DD2A /* Sources */,
+				CEF6348D281FF09000D3DD2A /* Frameworks */,
+				CEF6348E281FF09000D3DD2A /* Resources */,
+				0EA5C4121B9093E3DFAF31C5 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = DoorsApp;
+			productName = DoorsApp;
+			productReference = CEF63490281FF09000D3DD2A /* DoorsApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CEF63488281FF09000D3DD2A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
+				TargetAttributes = {
+					CEF6348F281FF09000D3DD2A = {
+						CreatedOnToolsVersion = 13.1;
+					};
+				};
+			};
+			buildConfigurationList = CEF6348B281FF09000D3DD2A /* Build configuration list for PBXProject "DoorsApp" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = CEF63487281FF09000D3DD2A;
+			productRefGroup = CEF63491281FF09000D3DD2A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CEF6348F281FF09000D3DD2A /* DoorsApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CEF6348E281FF09000D3DD2A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CEF634B4282017D400D3DD2A /* CameraTableViewCell.xib in Resources */,
+				CE238D5328228B53005EA25A /* TabBarCellView.xib in Resources */,
+				CEF634A0281FF09200D3DD2A /* LaunchScreen.storyboard in Resources */,
+				CEF6349D281FF09200D3DD2A /* Assets.xcassets in Resources */,
+				CEF6349B281FF09000D3DD2A /* Main.storyboard in Resources */,
+				CE238D6D2822BE5B005EA25A /* DoorsTableViewCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0EA5C4121B9093E3DFAF31C5 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoorsApp/Pods-DoorsApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DoorsApp/Pods-DoorsApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DoorsApp/Pods-DoorsApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5719E44603A5A55BC1767925 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DoorsApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CEF6348C281FF09000D3DD2A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CE238D41282269CF005EA25A /* CamerasRepository.swift in Sources */,
+				CEF849312823EC9B00A11B13 /* DoorDetailsViewController.swift in Sources */,
+				CE238D6F2822C1B4005EA25A /* DoorsRepository.swift in Sources */,
+				CEF8492B2823B53F00A11B13 /* NetworkService.swift in Sources */,
+				CE238D6C2822BE5B005EA25A /* DoorsTableViewCell.swift in Sources */,
+				CE238D47282282D5005EA25A /* TabBarView.swift in Sources */,
+				CE0F16E9282136D6005C0F28 /* RestApiClient.swift in Sources */,
+				CE238D712822C1F8005EA25A /* Repository.swift in Sources */,
+				CEF634B72820256500D3DD2A /* Cameras.swift in Sources */,
+				CE238D5228228B53005EA25A /* TabBarCellView.swift in Sources */,
+				CE238D5728229CEB005EA25A /* SceneDelegate.swift in Sources */,
+				CE238D4928228478005EA25A /* TabBarViewController.swift in Sources */,
+				CE238D622822B465005EA25A /* DoorModel.swift in Sources */,
+				CEF63498281FF09000D3DD2A /* CamerasViewController.swift in Sources */,
+				CE238D3B28225EE6005EA25A /* ApiClient.swift in Sources */,
+				CE238D55282291A1005EA25A /* CamerasTableView.swift in Sources */,
+				CE238D5B2822A218005EA25A /* DoorsViewController.swift in Sources */,
+				CEF8492D2823DA6B00A11B13 /* DoorEditViewController.swift in Sources */,
+				CEF634AE28200E6300D3DD2A /* CameraModel.swift in Sources */,
+				CEF8492F2823E35200A11B13 /* CachingRepository.swift in Sources */,
+				CEF63494281FF09000D3DD2A /* AppDelegate.swift in Sources */,
+				CE238D4B28228554005EA25A /* TabBarModel.swift in Sources */,
+				CEF634B3282017D400D3DD2A /* CameraTableViewCell.swift in Sources */,
+				CE238D5D2822AD54005EA25A /* Doors.swift in Sources */,
+				CE238D642822BBA2005EA25A /* DoorsTableView.swift in Sources */,
+				CE238D4328226A6E005EA25A /* UnitOfWork.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		CEF63499281FF09000D3DD2A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEF6349A281FF09000D3DD2A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		CEF6349E281FF09200D3DD2A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				CEF6349F281FF09200D3DD2A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		CEF634A2281FF09200D3DD2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CEF634A3281FF09200D3DD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		CEF634A5281FF09200D3DD2A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FF108B50C9888C34E2914623 /* Pods-DoorsApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DoorsApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rikmasters.DoorsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		CEF634A6281FF09200D3DD2A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 46DF8181B21056F6D22A23E1 /* Pods-DoorsApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = DoorsApp/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = rikmasters.DoorsApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CEF6348B281FF09000D3DD2A /* Build configuration list for PBXProject "DoorsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEF634A2281FF09200D3DD2A /* Debug */,
+				CEF634A3281FF09200D3DD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CEF634A4281FF09200D3DD2A /* Build configuration list for PBXNativeTarget "DoorsApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CEF634A5281FF09200D3DD2A /* Debug */,
+				CEF634A6281FF09200D3DD2A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CEF63488281FF09000D3DD2A /* Project object */;
+}
