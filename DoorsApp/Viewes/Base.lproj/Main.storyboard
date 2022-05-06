@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VNH-Mp-4dV" userLabel="ContainerView">
-                                <rect key="frame" x="0.0" y="95.5" width="414" height="766.5"/>
+                                <rect key="frame" x="0.0" y="106" width="414" height="756"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Jod-Ue-9N8" userLabel="Header">
@@ -42,7 +42,7 @@
                         <viewLayoutGuide key="safeArea" id="MIS-je-t1t"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                         <constraints>
-                            <constraint firstItem="VNH-Mp-4dV" firstAttribute="top" secondItem="Jod-Ue-9N8" secondAttribute="bottom" constant="-50" id="FXf-i9-AY3"/>
+                            <constraint firstItem="VNH-Mp-4dV" firstAttribute="top" secondItem="Jod-Ue-9N8" secondAttribute="bottom" multiplier="0.73" id="FXf-i9-AY3"/>
                             <constraint firstItem="MIS-je-t1t" firstAttribute="bottom" secondItem="VNH-Mp-4dV" secondAttribute="bottom" id="LFu-LN-wbu"/>
                             <constraint firstItem="Jod-Ue-9N8" firstAttribute="top" secondItem="MIS-je-t1t" secondAttribute="top" constant="15" id="Q16-Y8-ORX"/>
                             <constraint firstItem="Jod-Ue-9N8" firstAttribute="leading" secondItem="MIS-je-t1t" secondAttribute="leading" id="Qct-l5-uHB"/>

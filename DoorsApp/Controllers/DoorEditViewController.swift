@@ -24,6 +24,8 @@ class DoorEditViewController: UIViewController {
     func configure() {
         saveButton.addTarget(self, action: #selector(savePressed), for: .touchUpInside)
         
+        nameField.addTarget(self, action: #selector(savePressed), for: .primaryActionTriggered)
+        
         nameField.becomeFirstResponder()
         
         if let doorModel = doorModel {

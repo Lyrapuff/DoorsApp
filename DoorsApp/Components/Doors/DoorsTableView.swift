@@ -22,6 +22,10 @@ class DoorsTableView: ModelTableView<DoorModel> {
         
         rowHeight = UITableView.automaticDimension
         estimatedRowHeight = 200
+        
+        automaticallyAdjustsScrollIndicatorInsets = false
+        
+        contentInset = UIEdgeInsets(top: -32, left: 0, bottom: 0, right: 0)
     }
     
     func favoriteAction(cell: DoorsTableViewCell, model: DoorModel) -> UIContextualAction {

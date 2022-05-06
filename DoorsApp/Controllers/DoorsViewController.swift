@@ -78,7 +78,6 @@ class DoorsViewController: UIViewController {
     
     @objc func refreshData(_ sender: AnyObject) {
         doorModels.removeAll()
-        
         doorsRepository.deleteAll()
         
         doorsRepository.loadAll { doorModels in
