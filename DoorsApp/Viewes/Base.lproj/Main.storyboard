@@ -214,7 +214,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSn-Ej-NOm" userLabel="OpenView">
                                 <rect key="frame" x="15" y="707" width="384" height="90"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="key" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Tsr-TS-dMI">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="key" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Tsr-TS-dMI" userLabel="KeyIcon">
                                         <rect key="frame" x="0.0" y="7" width="384" height="48"/>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Открыть дверь" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nn5-0g-opI">
@@ -264,6 +264,7 @@
                     </view>
                     <connections>
                         <outlet property="backButton" destination="wMi-vy-9ei" id="Arv-aE-Wih"/>
+                        <outlet property="keyIcon" destination="Tsr-TS-dMI" id="QAk-Tc-fo0"/>
                         <outlet property="openView" destination="cSn-Ej-NOm" id="yhO-Q2-Yfd"/>
                         <outlet property="snapshotView" destination="Jc8-WM-adD" id="kA2-cy-Fxk"/>
                         <outlet property="titleText" destination="vX1-dJ-TWq" id="USj-g1-cvm"/>

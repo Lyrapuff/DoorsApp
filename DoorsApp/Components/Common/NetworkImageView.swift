@@ -10,9 +10,13 @@ import UIKit
 class NetworkImageView: UIImageView {
     var didSetImage: ((UIImage?) -> Void)?
     
-    private var imageDownloader = ServiceCollection.shared.resolve(type: ImageDownloaderProtocol.self)!
+    private var imageDownloader = ServiceCollection.shared.resolve(type: CachedImageDownloaderProtocol.self)!
     
-    func configure(for url: URL) {
+    func configure(for url: URL, cached: Bool = false) {
+        if !cached {
+            imageDownloader.clearCache(for: url)
+        }
+        
         imageDownloader.downloadImage(url: url) { snapshotImage in
             if let snapshotImage = snapshotImage {
                 self.image = snapshotImage

@@ -15,9 +15,13 @@ class DoorDetailsViewController: UIViewController {
     @IBOutlet weak var snapshotView: NetworkImageView!
     @IBOutlet weak var openView: UIView!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var keyIcon: UIImageView!
     
     override func viewDidLoad() {
         configure()
+        
+        // 45 degree rotation
+        keyIcon.transform = keyIcon.transform.rotated(by: .pi / 4.0)
     }
     
     func configure() {

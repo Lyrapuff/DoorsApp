@@ -9,8 +9,8 @@ import Foundation
 import RealmSwift
 
 class CachingRepository<T: Object>: Repository {
-    private var api = ServiceCollection.shared.resolve(type: ApiClient.self)!
-    private var uow = ServiceCollection.shared.resolve(type: UnitOfWork.self)!
+    @Injected private var api: ApiClient
+    @Injected private var uow: UnitOfWork
     
     func loadAll(loaded: @escaping ([T]?) -> Void) {
         let models = uow.realm.objects(T.self)

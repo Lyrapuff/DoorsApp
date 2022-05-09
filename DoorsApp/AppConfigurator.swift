@@ -10,11 +10,13 @@ import RealmSwift
 
 class AppConfigurator {
     func configureServices(serviceCollection: ServiceCollectionProtocol) {
+        serviceCollection.register(type: VcPresenterProtocol.self, instance: VcPresenter())
+        
         serviceCollection.register(type: Realm.self, instance: try! Realm())
         
         serviceCollection.register(type: URLSession.self, instance: URLSession.shared)
         
-        serviceCollection.register(type: ImageDownloaderProtocol.self, instance: CachedImageDownloader())
+        serviceCollection.register(type: CachedImageDownloaderProtocol.self, instance: CachedImageDownloader())
         
         serviceCollection.register(type: ApiClient.self, instance: RestApiClient())
         

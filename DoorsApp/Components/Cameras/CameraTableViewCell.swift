@@ -27,15 +27,10 @@ class CameraTableViewCell: UITableViewCell {
         if let url = URL(string: model.snapshot) {
             snapshotImage.configure(for: url)
             
-            snapshotImage.layer.cornerRadius = 10.0
-            snapshotImage.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner];
-            
             star.isHidden = !model.favorites
-            
-            dim.layer.cornerRadius = 10.0
-            dim.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner];
         }
         
         stackView.layer.cornerRadius = 10.0
+        stackView.layer.masksToBounds = true
     }
 }

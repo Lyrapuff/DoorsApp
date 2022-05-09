@@ -11,8 +11,14 @@ protocol ImageDownloaderProtocol {
     func downloadImage(url: URL, downloaded: @escaping (UIImage?) -> Void)
 }
 
-class CachedImageDownloader: ImageDownloaderProtocol {
-    private var urlSession = ServiceCollection.shared.resolve(type: URLSession.self)!
+protocol CachedImageDownloaderProtocol: ImageDownloaderProtocol {
+    func clearCache()
+    
+    func clearCache(for url: URL)
+}
+
+class CachedImageDownloader: CachedImageDownloaderProtocol {
+    @Injected private var urlSession: URLSession
     
     private var imageCache: [URL : UIImage] = [:]
 
@@ -48,5 +54,9 @@ class CachedImageDownloader: ImageDownloaderProtocol {
     
     func clearCache() {
         imageCache.removeAll()
+    }
+    
+    func clearCache(for url: URL) {
+        imageCache[url] = nil
     }
 }

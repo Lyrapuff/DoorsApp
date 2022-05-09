@@ -25,21 +25,16 @@ class DoorsTableViewCell: UITableViewCell {
     public func configure(doorModel: DoorModel) {
         title.text = doorModel.name
         
-        // oh no I'm wasting precious memory on generating closures each time unu who cares about memory anyway? well maybe I do..
+        // oh no I'm wasting precious memory on allocating closures each time unu who cares about memory anyway? well maybe I do..
         snapshotImage.didSetImage = NetworkImageView.hideIfNil(what: snapshotView)
         
         if let snapshot = doorModel.snapshot, let url = URL(string: snapshot) {
             snapshotImage.configure(for: url)
             
-            snapshotImage.layer.cornerRadius = 10.0
-            snapshotImage.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
-            
             star.isHidden = !doorModel.favorites
-            
-            dim.layer.cornerRadius = 10.0
-            dim.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner]
         }
         
         stackView.layer.cornerRadius = 10.0
+        stackView.layer.masksToBounds = true
     }
 }

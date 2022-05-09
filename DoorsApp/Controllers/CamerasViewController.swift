@@ -9,7 +9,7 @@ import UIKit
 
 class CamerasViewController: UIViewController {
 
-    private let camerasRepository = ServiceCollection.shared.resolve(type: CachingRepository<CameraModel>.self)!
+    @Injected private var camerasRepository: CachingRepository<CameraModel>
     
     var cameraGroups: [CameraGroup] = [] {
         didSet {

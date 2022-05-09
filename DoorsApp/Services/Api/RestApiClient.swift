@@ -12,7 +12,7 @@ class RestApiClient: ApiClient {
     
     private let baseUrl = "https://cars.cprogroup.ru/api/rubetek/"
     
-    private var urlSession = ServiceCollection.shared.resolve(type: URLSession.self)!
+    @Injected private var urlSession: URLSession
     
     func get<T: Codable>(
         method: String,

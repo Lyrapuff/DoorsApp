@@ -8,7 +8,8 @@
 import UIKit
 
 class DoorsViewController: UIViewController {
-    private var doorsRepository = ServiceCollection.shared.resolve(type: CachingRepository<DoorModel>.self)!
+    @Injected private var vcPresenter: VcPresenterProtocol
+    @Injected private var doorsRepository: CachingRepository<DoorModel>
     
     var doorModels: [DoorModel] = [] {
         didSet {
@@ -25,6 +26,7 @@ class DoorsViewController: UIViewController {
     var refreshControl: UIRefreshControl = UIRefreshControl()
     
     override func viewDidLoad() {
+
         initializeData()
         
         configureRefreshControl()
@@ -41,31 +43,26 @@ class DoorsViewController: UIViewController {
     }
     
     func tableViewDidEdit(doorModel: DoorModel) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "DoorEditViewController")
-        
-        if let vc = vc as? DoorEditViewController {
-            vc.doorModel = doorModel
-            
-            vc.didSave = {
-                self.doorsRepository.change {
-                    doorModel.name = vc.nameField.text ?? doorModel.name
-                }
+        if let storyboard = storyboard {
+            vcPresenter.transition(presenter: self, storyboard: storyboard, vcType: DoorEditViewController.self) { vc in
+                vc.doorModel = doorModel
                 
-                self.tableView.reloadData()
+                vc.didSave = {
+                    self.doorsRepository.change {
+                        doorModel.name = vc.nameField.text ?? doorModel.name
+                    }
+                    
+                    self.tableView.reloadData()
+                }
             }
-            
-            present(vc, animated: true, completion: nil)
         }
     }
     
     func tableViewDidPress(doorModel: DoorModel) {
-        let vc = storyboard?.instantiateViewController(withIdentifier: "DoorDetailsViewController")
-        
-        if let vc = vc as? DoorDetailsViewController {
-            vc.doorModel = doorModel
-            
-            //present(vc, animated: true, completion: nil)
-            show(vc, sender: self)
+        if let storyboard = storyboard {
+            vcPresenter.transition(presenter: self, storyboard: storyboard, vcType: DoorDetailsViewController.self) { vc in
+                vc.doorModel = doorModel
+            }
         }
     }
     

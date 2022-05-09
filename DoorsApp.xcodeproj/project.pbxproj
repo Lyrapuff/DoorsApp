@@ -27,6 +27,8 @@
 		CE238D6D2822BE5B005EA25A /* DoorsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CE238D6B2822BE5B005EA25A /* DoorsTableViewCell.xib */; };
 		CE238D6F2822C1B4005EA25A /* DoorsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D6E2822C1B4005EA25A /* DoorsRepository.swift */; };
 		CE238D712822C1F8005EA25A /* Repository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE238D702822C1F8005EA25A /* Repository.swift */; };
+		CE4CE3FA2828F6B500B09FE6 /* VcPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4CE3F92828F6B500B09FE6 /* VcPresenter.swift */; };
+		CE4CE3FC28290D4900B09FE6 /* Injected.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE4CE3FB28290D4900B09FE6 /* Injected.swift */; };
 		CE50BF8F28250B6A006442E0 /* NetworkImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50BF8E28250B6A006442E0 /* NetworkImageView.swift */; };
 		CE50BF912825155C006442E0 /* ModelTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50BF902825155C006442E0 /* ModelTableView.swift */; };
 		CE50BF95282539A9006442E0 /* ServiceCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE50BF94282539A9006442E0 /* ServiceCollection.swift */; };
@@ -40,7 +42,7 @@
 		CEF634B3282017D400D3DD2A /* CameraTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF634B1282017D400D3DD2A /* CameraTableViewCell.swift */; };
 		CEF634B4282017D400D3DD2A /* CameraTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CEF634B2282017D400D3DD2A /* CameraTableViewCell.xib */; };
 		CEF634B72820256500D3DD2A /* Cameras.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF634B62820256500D3DD2A /* Cameras.swift */; };
-		CEF8492B2823B53F00A11B13 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8492A2823B53F00A11B13 /* NetworkService.swift */; };
+		CEF8492B2823B53F00A11B13 /* ImageDownloader.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8492A2823B53F00A11B13 /* ImageDownloader.swift */; };
 		CEF8492D2823DA6B00A11B13 /* DoorEditViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8492C2823DA6B00A11B13 /* DoorEditViewController.swift */; };
 		CEF8492F2823E35200A11B13 /* CachingRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF8492E2823E35200A11B13 /* CachingRepository.swift */; };
 		CEF849312823EC9B00A11B13 /* DoorDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CEF849302823EC9B00A11B13 /* DoorDetailsViewController.swift */; };
@@ -67,6 +69,8 @@
 		CE238D6B2822BE5B005EA25A /* DoorsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DoorsTableViewCell.xib; sourceTree = "<group>"; };
 		CE238D6E2822C1B4005EA25A /* DoorsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorsRepository.swift; sourceTree = "<group>"; };
 		CE238D702822C1F8005EA25A /* Repository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repository.swift; sourceTree = "<group>"; };
+		CE4CE3F92828F6B500B09FE6 /* VcPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VcPresenter.swift; sourceTree = "<group>"; };
+		CE4CE3FB28290D4900B09FE6 /* Injected.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Injected.swift; sourceTree = "<group>"; };
 		CE50BF8E28250B6A006442E0 /* NetworkImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkImageView.swift; sourceTree = "<group>"; };
 		CE50BF902825155C006442E0 /* ModelTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelTableView.swift; sourceTree = "<group>"; };
 		CE50BF94282539A9006442E0 /* ServiceCollection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCollection.swift; sourceTree = "<group>"; };
@@ -82,7 +86,7 @@
 		CEF634B1282017D400D3DD2A /* CameraTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraTableViewCell.swift; sourceTree = "<group>"; };
 		CEF634B2282017D400D3DD2A /* CameraTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CameraTableViewCell.xib; sourceTree = "<group>"; };
 		CEF634B62820256500D3DD2A /* Cameras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cameras.swift; sourceTree = "<group>"; };
-		CEF8492A2823B53F00A11B13 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		CEF8492A2823B53F00A11B13 /* ImageDownloader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageDownloader.swift; sourceTree = "<group>"; };
 		CEF8492C2823DA6B00A11B13 /* DoorEditViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorEditViewController.swift; sourceTree = "<group>"; };
 		CEF8492E2823E35200A11B13 /* CachingRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachingRepository.swift; sourceTree = "<group>"; };
 		CEF849302823EC9B00A11B13 /* DoorDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorDetailsViewController.swift; sourceTree = "<group>"; };
@@ -145,10 +149,11 @@
 		CE0F16EA282140DC005C0F28 /* Services */ = {
 			isa = PBXGroup;
 			children = (
+				CE4CE3FD28290EF800B09FE6 /* Injection */,
 				CE50BF922825195C006442E0 /* Persistence */,
 				CEF634B52820254E00D3DD2A /* Api */,
-				CEF8492A2823B53F00A11B13 /* NetworkService.swift */,
-				CE50BF94282539A9006442E0 /* ServiceCollection.swift */,
+				CEF8492A2823B53F00A11B13 /* ImageDownloader.swift */,
+				CE4CE3F92828F6B500B09FE6 /* VcPresenter.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -209,6 +214,15 @@
 				CE238D6B2822BE5B005EA25A /* DoorsTableViewCell.xib */,
 			);
 			path = Doors;
+			sourceTree = "<group>";
+		};
+		CE4CE3FD28290EF800B09FE6 /* Injection */ = {
+			isa = PBXGroup;
+			children = (
+				CE50BF94282539A9006442E0 /* ServiceCollection.swift */,
+				CE4CE3FB28290D4900B09FE6 /* Injected.swift */,
+			);
+			path = Injection;
 			sourceTree = "<group>";
 		};
 		CE50BF922825195C006442E0 /* Persistence */ = {
@@ -406,7 +420,8 @@
 				CE238D41282269CF005EA25A /* CamerasRepository.swift in Sources */,
 				CEF849312823EC9B00A11B13 /* DoorDetailsViewController.swift in Sources */,
 				CE238D6F2822C1B4005EA25A /* DoorsRepository.swift in Sources */,
-				CEF8492B2823B53F00A11B13 /* NetworkService.swift in Sources */,
+				CE4CE3FA2828F6B500B09FE6 /* VcPresenter.swift in Sources */,
+				CEF8492B2823B53F00A11B13 /* ImageDownloader.swift in Sources */,
 				CE238D6C2822BE5B005EA25A /* DoorsTableViewCell.swift in Sources */,
 				CE238D47282282D5005EA25A /* TabBarView.swift in Sources */,
 				CE0F16E9282136D6005C0F28 /* RestApiClient.swift in Sources */,
@@ -417,6 +432,7 @@
 				CE238D5228228B53005EA25A /* TabBarCellView.swift in Sources */,
 				CE238D5728229CEB005EA25A /* SceneDelegate.swift in Sources */,
 				CE238D4928228478005EA25A /* TabBarViewController.swift in Sources */,
+				CE4CE3FC28290D4900B09FE6 /* Injected.swift in Sources */,
 				CE50BF95282539A9006442E0 /* ServiceCollection.swift in Sources */,
 				CE238D622822B465005EA25A /* DoorModel.swift in Sources */,
 				CEF63498281FF09000D3DD2A /* CamerasViewController.swift in Sources */,
